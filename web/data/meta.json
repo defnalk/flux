@@ -1,0 +1,17 @@
+{
+  "generated_at": "2026-05-01T01:32:38.624640+00:00",
+  "sources": {
+    "ember": {
+      "url": "https://storage.googleapis.com/emb-prod-bkt-publicdata/public-downloads/yearly_full_release_long_format.csv",
+      "rows_after_filter": 52342,
+      "license": "CC BY 4.0",
+      "citation": "Ember (2025). Yearly Electricity Data."
+    },
+    "eu_ets": {
+      "url": "https://climate.ec.europa.eu/eu-action/eu-emissions-trading-system-eu-ets_en",
+      "rows": 72,
+      "note": "Curated sector totals from EEA / EU ETS verified emissions reports."
+    }
+  },
+  "countries_covered": 31
+}

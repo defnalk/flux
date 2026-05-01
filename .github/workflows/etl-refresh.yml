@@ -1,0 +1,50 @@
+name: ETL refresh
+
+on:
+  schedule:
+    - cron: "0 6 1 * *" # 06:00 UTC on the 1st of every month
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+
+      - name: Sync etl/ deps
+        working-directory: etl
+        run: uv sync --extra dev
+
+      - name: Run ETL (force re-download)
+        working-directory: etl
+        run: uv run python build.py --force --verbose
+
+      - name: Show diff summary
+        run: |
+          git diff --stat web/data || true
+
+      - name: Open PR if data changed
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: etl/auto-refresh
+          delete-branch: true
+          commit-message: "data: monthly EMBER refresh"
+          title: "data: monthly EMBER refresh"
+          body: |
+            Automated monthly refresh of `web/data/flux.sqlite` from the
+            EMBER yearly electricity dataset.
+
+            See `etl/build.py` for the pipeline.
+          add-paths: |
+            web/data/flux.sqlite
+            web/data/eu_ets.csv
+            web/data/meta.json

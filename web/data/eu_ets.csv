@@ -1,0 +1,73 @@
+year,sector,verified_emissions_mt_co2e,free_allocation_mt,allowance_price_eur,note
+2013,Aviation (intra-EEA),53,32,4.45,Aviation joined ETS in 2012
+2014,Aviation (intra-EEA),55,32,5.95,
+2015,Aviation (intra-EEA),57,32,7.69,
+2016,Aviation (intra-EEA),61,32,5.35,
+2017,Aviation (intra-EEA),64,32,5.85,
+2018,Aviation (intra-EEA),67,32,15.74,
+2019,Aviation (intra-EEA),68,32,24.84,
+2020,Aviation (intra-EEA),28,32,24.74,Pandemic flightcuts
+2021,Aviation (intra-EEA),34,32,53.45,
+2022,Aviation (intra-EEA),59,32,80.83,Recovery
+2023,Aviation (intra-EEA),65,28,83.66,Free allocation phase-out begins
+2024,Aviation (intra-EEA),68,20,65.1,
+2013,Cement and lime,156,158,4.45,
+2014,Cement and lime,151,156,5.95,
+2015,Cement and lime,149,154,7.69,
+2016,Cement and lime,148,152,5.35,
+2017,Cement and lime,151,150,5.85,
+2018,Cement and lime,154,148,15.74,
+2019,Cement and lime,150,146,24.84,
+2020,Cement and lime,140,144,24.74,
+2021,Cement and lime,148,142,53.45,
+2022,Cement and lime,141,140,80.83,
+2023,Cement and lime,131,138,83.66,
+2024,Cement and lime,127,136,65.1,
+2013,Chemicals,138,145,4.45,
+2014,Chemicals,135,142,5.95,
+2015,Chemicals,134,140,7.69,
+2016,Chemicals,131,138,5.35,
+2017,Chemicals,130,136,5.85,
+2018,Chemicals,127,134,15.74,
+2019,Chemicals,123,132,24.84,
+2020,Chemicals,113,130,24.74,
+2021,Chemicals,118,128,53.45,
+2022,Chemicals,114,126,80.83,
+2023,Chemicals,107,124,83.66,
+2024,Chemicals,102,122,65.1,
+2013,Iron and steel,143,158,4.45,Free allocation slightly above verified
+2014,Iron and steel,141,154,5.95,
+2015,Iron and steel,138,150,7.69,
+2016,Iron and steel,134,146,5.35,
+2017,Iron and steel,135,142,5.85,
+2018,Iron and steel,132,138,15.74,
+2019,Iron and steel,128,134,24.84,
+2020,Iron and steel,113,130,24.74,COVID
+2021,Iron and steel,123,126,53.45,
+2022,Iron and steel,118,122,80.83,Energy cost shock
+2023,Iron and steel,108,118,83.66,
+2024,Iron and steel,103,114,65.1,
+2013,Power and heat,1085,640,4.45,Phase III begins; surplus depresses price
+2014,Power and heat,1014,575,5.95,
+2015,Power and heat,962,540,7.69,
+2016,Power and heat,915,510,5.35,
+2017,Power and heat,876,490,5.85,MSR adopted late-year
+2018,Power and heat,801,470,15.74,Reform takes effect; price triples
+2019,Power and heat,705,455,24.84,Coal-to-gas switching accelerates
+2020,Power and heat,572,440,24.74,COVID demand drop
+2021,Power and heat,633,420,53.45,Gas crisis lifts coal share briefly
+2022,Power and heat,610,400,80.83,RU gas cut; record price year
+2023,Power and heat,512,380,83.66,Renewables surge; coal exit pace
+2024,Power and heat,460,360,65.1,Provisional EEA estimate
+2013,Refineries,148,135,4.45,
+2014,Refineries,144,132,5.95,
+2015,Refineries,141,130,7.69,
+2016,Refineries,138,128,5.35,
+2017,Refineries,135,126,5.85,
+2018,Refineries,132,124,15.74,
+2019,Refineries,128,122,24.84,
+2020,Refineries,113,120,24.74,
+2021,Refineries,118,118,53.45,
+2022,Refineries,121,116,80.83,
+2023,Refineries,114,114,83.66,
+2024,Refineries,108,112,65.1,

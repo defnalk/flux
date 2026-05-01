@@ -23,12 +23,16 @@ next-env.d.ts
 # Logs
 *.log
 
-# Python (etl/, added in M2)
+# Python (etl/)
 __pycache__/
 *.py[cod]
 .venv/
 .uv/
+etl/.cache/
 *.sqlite-journal
+.pytest_cache/
+.coverage
+htmlcov/
 
 # Build artefacts
 coverage/
