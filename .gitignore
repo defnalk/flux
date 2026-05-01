@@ -1,0 +1,36 @@
+# macOS
+.DS_Store
+
+# Editor
+.idea/
+.vscode/
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Next.js
+.next/
+out/
+*.tsbuildinfo
+next-env.d.ts
+
+# Env
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+
+# Python (etl/, added in M2)
+__pycache__/
+*.py[cod]
+.venv/
+.uv/
+*.sqlite-journal
+
+# Build artefacts
+coverage/
+playwright-report/
+test-results/

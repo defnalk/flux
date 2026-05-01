@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  color-scheme: dark;
+
+  --background: #06080d;
+  --surface: #0b1018;
+  --surface-2: #11182a;
+  --foreground: #e8ecf3;
+  --muted: #8b94a3;
+  --muted-2: #5b6473;
+  --border: #1c2333;
+  --border-strong: #2a3247;
+
+  --primary: #5eead4;
+  --primary-strong: #2dd4bf;
+  --primary-foreground: #04221d;
+
+  --accent: #a78bfa;
+  --accent-foreground: #1a0e3b;
+
+  --ring: color-mix(in oklab, var(--primary) 60%, transparent);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-muted-2: var(--muted-2);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-primary: var(--primary);
+  --color-primary-strong: var(--primary-strong);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-ring: var(--ring);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --radius-card: 1.25rem;
+
+  --animate-pulse-soft: pulse-soft 2.6s ease-in-out infinite;
+  --animate-grid-drift: grid-drift 40s linear infinite;
+  --animate-aurora: aurora 14s ease-in-out infinite;
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.55; transform: scale(0.85); }
+}
+
+@keyframes grid-drift {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-80px, -80px, 0); }
+}
+
+@keyframes aurora {
+  0%, 100% { opacity: 0.45; transform: translate3d(0, 0, 0) scale(1); }
+  50% { opacity: 0.75; transform: translate3d(2%, -3%, 0) scale(1.08); }
+}
+
+html, body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+body {
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--primary) 35%, transparent);
+  color: var(--foreground);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
