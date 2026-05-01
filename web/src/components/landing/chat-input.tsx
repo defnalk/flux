@@ -1,8 +1,8 @@
 "use client";
 
 import * as React from "react";
+import { useRouter } from "next/navigation";
 import { ArrowUp, Sparkles } from "lucide-react";
-import { motion, AnimatePresence } from "motion/react";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -15,20 +15,17 @@ const EXAMPLE_PROMPTS = [
 ] as const;
 
 export function ChatInput() {
+  const router = useRouter();
   const [value, setValue] = React.useState("");
   const [pending, setPending] = React.useState(false);
-  const [hint, setHint] = React.useState<string | null>(null);
   const inputRef = React.useRef<HTMLInputElement>(null);
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    if (!value.trim() || pending) return;
+    const trimmed = value.trim();
+    if (!trimmed || pending) return;
     setPending(true);
-    setHint("Backend wires up in milestone 3 — UI is live.");
-    window.setTimeout(() => {
-      setPending(false);
-      setHint(null);
-    }, 2200);
+    router.push(`/chat?q=${encodeURIComponent(trimmed)}`);
   }
 
   function pickExample(prompt: string) {
@@ -90,21 +87,6 @@ export function ChatInput() {
         ))}
       </div>
 
-      <AnimatePresence>
-        {hint && (
-          <motion.p
-            key={hint}
-            initial={{ opacity: 0, y: 4 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 4 }}
-            transition={{ duration: 0.18 }}
-            className="text-xs text-muted-2"
-            role="status"
-          >
-            {hint}
-          </motion.p>
-        )}
-      </AnimatePresence>
     </div>
   );
 }
