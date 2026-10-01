@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-05-01T01:32:38.624640+00:00",
+  "generated_at": "2026-10-01T12:10:41.808173+00:00",
   "sources": {
     "ember": {
       "url": "https://storage.googleapis.com/emb-prod-bkt-publicdata/public-downloads/yearly_full_release_long_format.csv",
-      "rows_after_filter": 52342,
+      "rows_after_filter": 52786,
       "license": "CC BY 4.0",
       "citation": "Ember (2025). Yearly Electricity Data."
     },
